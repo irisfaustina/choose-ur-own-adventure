@@ -41,7 +41,7 @@ function StoryGame({story, onNewStory}) {
         }
     }
 
-    return <div className="story-game">
+    return <div className="story-game"> 
         <header className="story-header">
             <h2>{story.title}</h2>
         </header>

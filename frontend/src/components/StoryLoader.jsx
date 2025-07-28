@@ -3,7 +3,7 @@ import {useParams, useNavigate} from "react-router-dom"
 import axios from 'axios';
 import LoadingStatus from "./LoadingStatus.jsx";
 import StoryGame from "./StoryGame.jsx";
-import {API_BASE_URL} from "../src/util.js";
+import {API_BASE_URL} from "../util.js";
 
 function StoryLoader() {
     const {id} = useParams();
@@ -12,7 +12,7 @@ function StoryLoader() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null);
 
-    useEffect(() => {
+    useEffect(() => { // when id changes, load story
         loadStory(id)
     }, [id])
 
@@ -35,7 +35,7 @@ function StoryLoader() {
         }
     }
 
-    const createNewStory = () => {
+    const createNewStory = () => { // navigate to story generator
         navigate("/")
     }
 
