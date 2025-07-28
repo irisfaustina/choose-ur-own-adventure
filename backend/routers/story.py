@@ -22,7 +22,7 @@ def get_session_id(session_id: Optional[str] = Cookie(None)): #get session id fr
         session_id = str(uuid.uuid4())
     return session_id
 
-@router.post("/", response_model=StoryJobResponse) #post request to create a story
+@router.post("/create", response_model=StoryJobResponse) #post request to create a story
 def create_story( #inject values to parameters
     request: CreateStoryRequest,
     background_tasks: BackgroundTasks,
