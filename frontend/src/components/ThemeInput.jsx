@@ -16,7 +16,7 @@ function ThemeInput({onSubmit}) { // call on submit function
     }
 
     return <div className="theme-input-container"> 
-        <h2>Choose Your Own Adventure</h2>
+        <h2>Choose A Theme</h2>
         <p>Enter a theme for your interactive story</p>
 
         <form onSubmit={handleSubmit}> 

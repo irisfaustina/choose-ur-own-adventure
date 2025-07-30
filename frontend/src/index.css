@@ -3,7 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* Default to dark mode colors */
   color-scheme: dark;
   color: #f8f9fa;          /* Light text */
   background-color: #1a1a2e; /* Dark background */
@@ -24,7 +23,6 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  /* Optionally reinforce background color */
   background-color: #1a1a2e;
   color: #f8f9fa;
 }
@@ -54,23 +52,4 @@ button:hover {
   background-color: #1a6fb0;
 }
 
-/* (OPTIONAL) Add a light mode override for users who prefer light themes */
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-    color: #333;
-    background-color: #f8f9fa;
-  }
-  body {
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  button {
-    background-color: #e0e0e0;
-    color: #333;
-  }
-  button:hover {
-    background-color: #bdbdbd;
-  }
-}
 
