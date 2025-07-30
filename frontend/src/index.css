@@ -1,74 +1,17 @@
-@import './styles/dark-mode.css';
-
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #333;
-  background-color: #f8f9fa;
+
+  /* Default to dark mode colors */
+  color-scheme: dark;
+  color: #f8f9fa;          /* Light text */
+  background-color: #1a1a2e; /* Dark background */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Base styles for light mode */
-.app-container.light {
-  background-color: #f8f9fa;
-  color: #333;
-}
-
-.theme-input-container.light,
-.story-game.light {
-  background-color: white;
-  border: 1px solid #dee2e6;
-}
-
-.story-node.light,
-.story-options.light,
-.story-ending.light {
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-}
-
-.option-btn.light,
-.reset-btn.light,
-.new-story-btn.light {
-  background-color: #1a1a1a;
-  color: white;
-  border: 1px solid #1a1a1a;
-}
-
-.option-btn.light:hover,
-.reset-btn.light:hover,
-.new-story-btn.light:hover {
-  background-color: #3f72af;
-  border-color: #3f72af;
-}
-
-input.light,
-textarea.light {
-  background-color: white;
-  color: #333;
-  border: 1px solid #dee2e6;
-}
-
-input.light:focus,
-textarea.light:focus {
-  border-color: #3f72af;
-  outline-color: #3f72af;
-}
-
-.loading-status.light {
-  background-color: white;
-  border: 1px solid #dee2e6;
-}
-
-.error-message.light {
-  background-color: #f8d7da;
-  border: 1px solid #dc3545;
-  color: #dc3545;
 }
 
 * {
@@ -78,38 +21,12 @@ textarea.light:focus {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
   min-width: 320px;
   min-height: 100vh;
-}
-
-.App-header {
-  padding: 1rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-}
-
-.theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
-}
-
-:root.dark .theme-toggle:hover {
-  background-color: rgba(63, 114, 175, 0.2);
+  /* Optionally reinforce background color */
+  background-color: #1a1a2e;
+  color: #f8f9fa;
 }
 
 h1 {
@@ -128,94 +45,32 @@ h3 {
 }
 
 button {
-  border-radius: 8px;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background-color 0.25s;
-}
-
-button {
-  background-color: #1a1a1a;
+  background-color: #3f72af; /* Vivid blue */
   color: #f8f9fa;
+  border: none;
 }
 
 button:hover {
-  background-color: #3f72af;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-/* Dark mode styles */
-:root.dark button {
-  background-color: #3f72af;
-}
-
-:root.dark button:hover {
   background-color: #1a6fb0;
 }
 
-:root.dark input,
-:root.dark textarea {
-  background-color: #2d2d44;
-  color: #f8f9fa;
-  border: 1px solid #3f72af;
-}
-
-:root.dark .theme-input-container {
-  background-color: #2d2d44;
-  border: 1px solid #3f72af;
-}
-
-:root.dark .story-game {
-  background-color: #2d2d44;
-  border: 1px solid #3f72af;
-}
-
-:root.dark .story-node,
-:root.dark .story-options,
-:root.dark .story-ending {
-  background-color: #1a1a2e;
-  border: 1px solid #3f72af;
-}
-
-:root.dark .option-btn {
-  background-color: #3f72af;
-  color: #f8f9fa;
-}
-
-:root.dark .option-btn:hover {
-  background-color: #1a6fb0;
-}
-
-:root.dark .reset-btn,
-:root.dark .new-story-btn {
-  background-color: #3f72af;
-}
-
-:root.dark .reset-btn:hover,
-:root.dark .new-story-btn:hover {
-  background-color: #1a6fb0;
-}
-
-:root.dark .loading-status {
-  background-color: #1a1a2e;
-  border: 1px solid #3f72af;
-}
-
-:root.dark .error-message {
-  background-color: #4a1515;
-  border: 1px solid #ff4444;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.dark) {
-    color: #f8f9fa;
-    background-color: #1a1a2e;
+/* (OPTIONAL) Add a light mode override for users who prefer light themes */
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  body {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  button {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  button:hover {
+    background-color: #bdbdbd;
   }
 }
+
