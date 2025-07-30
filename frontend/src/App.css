@@ -2,15 +2,16 @@
   --primary-color: #4a6fa5;
   --secondary-color: #166d89;
   --accent-color: #48cae4;
-  --text-color: #333;
-  --background-color: #f8f9fa;
-  --card-background: #ffffff;
+  --text-color: #f8f9fa;
+  --background-color: #1a1a2e;
+  --card-background: #232946;
   --success-color: #4caf50;
-  --error-color: #f44336;
+  --error-color: #ff7b84;
   --border-radius: 8px;
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 6px rgba(0,0,0,0.4);
 }
 
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,6 +25,7 @@ body {
   background-color: var(--background-color);
 }
 
+/* Layout Components */
 .app-container {
   max-width: 800px;
   margin: 0 auto;
@@ -44,8 +46,8 @@ footer {
   text-align: center;
   margin-top: 3rem;
   padding-top: 1rem;
-  color: #666;
-  border-top: 1px solid #eee;
+  color: #9baec8;
+  border-top: 1px solid #27304a;
 }
 
 button {
@@ -89,8 +91,10 @@ button:hover {
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
-  border: 1px solid #ddd;
+  border: 1px solid #38405a;
   border-radius: var(--border-radius);
+  background: #181b2a;
+  color: var(--text-color);
 }
 
 .input-group input.error {
@@ -115,6 +119,7 @@ button:hover {
   background-color: var(--secondary-color);
 }
 
+/* Examples */
 .examples {
   margin-top: 2rem;
   text-align: left;
@@ -123,7 +128,7 @@ button:hover {
 .examples h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #666;
+  color: #9baec8;
 }
 
 .examples ul {
@@ -132,11 +137,12 @@ button:hover {
 
 .examples li {
   display: inline-block;
-  background-color: #f0f0f0;
+  background-color: #242b40;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem;
   border-radius: 4px;
   font-size: 0.875rem;
+  color: #aad9ff;
 }
 
 /* Loading */
@@ -164,7 +170,7 @@ button:hover {
 .spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
+  border: 5px solid rgba(255,255,255,0.07);
   border-top-color: var(--accent-color);
   border-radius: 50%;
   margin: 0 auto;
@@ -177,7 +183,7 @@ button:hover {
 
 .loading-info {
   margin-top: 1rem;
-  color: #666;
+  color: #7a869a;
 }
 
 /* Story Container and Actions */
@@ -192,8 +198,8 @@ button:hover {
   display: flex;
   gap: 1rem;
   padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  background-color: #232946;
+  border-bottom: 1px solid #212c41;
   justify-content: flex-end;
 }
 
@@ -222,12 +228,12 @@ button:hover {
 
 .story-nav {
   padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  background-color: #181b2a;
+  border-bottom: 1px solid #27304a;
 }
 
 .home-btn {
-  background-color: #6c757d;
+  background-color: #38405a;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -238,7 +244,7 @@ button:hover {
 }
 
 .home-btn:hover {
-  background-color: #5a6268;
+  background-color: #27304a;
 }
 
 /* Story Game */
@@ -253,7 +259,7 @@ button:hover {
   text-align: center;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #27304a;
 }
 
 .story-header h2 {
@@ -284,14 +290,14 @@ button:hover {
 .option-btn {
   text-align: left;
   padding: 1rem;
-  background-color: #f0f7ff;
+  background-color: #18263a;
   color: var(--text-color);
-  border: 1px solid #d0e0f7;
+  border: 1px solid #27304a;
   transition: all 0.3s;
 }
 
 .option-btn:hover {
-  background-color: #e0f0ff;
+  background-color: #1c2d4a;
   transform: translateY(-2px);
 }
 
@@ -321,7 +327,7 @@ button:hover {
 }
 
 .ending-message {
-  color: #666;
+  color: #9baec8;
   margin-bottom: 1.5rem;
 }
 
@@ -336,21 +342,21 @@ button:hover {
   gap: 1rem;
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #27304a;
 }
 
 .reset-btn {
-  background-color: #f0f0f0;
-  color: #666;
+  background-color: #38405a;
+  color: #aac9ee;
 }
 
 .reset-btn:hover {
-  background-color: #e0e0e0;
+  background-color: #27304a;
 }
 
 /* Error Message */
 .error-message {
-  background-color: #ffebee;
+  background-color: #392d37;
   color: var(--error-color);
   padding: 1.5rem;
   border-radius: var(--border-radius);
@@ -367,5 +373,6 @@ button:hover {
 }
 
 .error-message button:hover {
-  background-color: #d32f2f;
+  background-color: #b84a62;
 }
+
