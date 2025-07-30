@@ -2,8 +2,6 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: #333;
   background-color: #f8f9fa;
 
@@ -13,6 +11,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root.dark {
+  color: #f8f9fa;
+  background-color: #1a1a2e;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,9 +23,38 @@
 }
 
 body {
-  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.App-header {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+:root.dark .theme-toggle:hover {
+  background-color: rgba(63, 114, 175, 0.2);
 }
 
 h1 {
@@ -40,17 +72,95 @@ h3 {
   line-height: 1.4;
 }
 
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+button:hover {
+  background-color: #3f72af;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Dark mode styles */
+:root.dark button {
+  background-color: #3f72af;
+}
+
+:root.dark button:hover {
+  background-color: #1a6fb0;
+}
+
+:root.dark input,
+:root.dark textarea {
+  background-color: #2d2d44;
+  color: #f8f9fa;
+  border: 1px solid #3f72af;
+}
+
+:root.dark .theme-input-container {
+  background-color: #2d2d44;
+  border: 1px solid #3f72af;
+}
+
+:root.dark .story-game {
+  background-color: #2d2d44;
+  border: 1px solid #3f72af;
+}
+
+:root.dark .story-node,
+:root.dark .story-options,
+:root.dark .story-ending {
+  background-color: #1a1a2e;
+  border: 1px solid #3f72af;
+}
+
+:root.dark .option-btn {
+  background-color: #3f72af;
+  color: #f8f9fa;
+}
+
+:root.dark .option-btn:hover {
+  background-color: #1a6fb0;
+}
+
+:root.dark .reset-btn,
+:root.dark .new-story-btn {
+  background-color: #3f72af;
+}
+
+:root.dark .reset-btn:hover,
+:root.dark .new-story-btn:hover {
+  background-color: #1a6fb0;
+}
+
+:root.dark .loading-status {
+  background-color: #1a1a2e;
+  border: 1px solid #3f72af;
+}
+
+:root.dark .error-message {
+  background-color: #4a1515;
+  border: 1px solid #ff4444;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.dark) {
     color: #f8f9fa;
     background-color: #1a1a2e;
-  }
-
-  button {
-    background-color: #3f72af;
-  }
-
-  button:hover {
-    background-color: #1a6fb0;
   }
 }
