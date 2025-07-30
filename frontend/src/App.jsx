@@ -42,7 +42,7 @@ function ThemeToggle() {
       >
         {isDarkMode ? '☀️' : '🌙'}
       </button>
-      <h1>Interactive Story Generator</h1>
+      <h1>Choose Your Own Adventure</h1>
     </header>
   )
 }

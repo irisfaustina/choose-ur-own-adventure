@@ -1,3 +1,5 @@
+@import './styles/dark-mode.css';
+
 :root {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
@@ -11,9 +13,62 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root.dark {
-  color: #f8f9fa;
-  background-color: #1a1a2e;
+/* Base styles for light mode */
+.app-container.light {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.theme-input-container.light,
+.story-game.light {
+  background-color: white;
+  border: 1px solid #dee2e6;
+}
+
+.story-node.light,
+.story-options.light,
+.story-ending.light {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.option-btn.light,
+.reset-btn.light,
+.new-story-btn.light {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #1a1a1a;
+}
+
+.option-btn.light:hover,
+.reset-btn.light:hover,
+.new-story-btn.light:hover {
+  background-color: #3f72af;
+  border-color: #3f72af;
+}
+
+input.light,
+textarea.light {
+  background-color: white;
+  color: #333;
+  border: 1px solid #dee2e6;
+}
+
+input.light:focus,
+textarea.light:focus {
+  border-color: #3f72af;
+  outline-color: #3f72af;
+}
+
+.loading-status.light {
+  background-color: white;
+  border: 1px solid #dee2e6;
+}
+
+.error-message.light {
+  background-color: #f8d7da;
+  border: 1px solid #dc3545;
+  color: #dc3545;
 }
 
 * {
