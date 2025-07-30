@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from 'react'
 
 const ThemeContext = createContext()
 
-export function ThemeProvider({ children }) {
+function ThemeProvider({ children }) {
     const [isDarkMode, setIsDarkMode] = useState(false)
 
     const toggleTheme = () => {
@@ -17,6 +17,9 @@ export function ThemeProvider({ children }) {
     )
 }
 
-export function useTheme() {
+function useTheme() {
     return useContext(ThemeContext)
 }
+
+export default ThemeProvider
+export { useTheme }
